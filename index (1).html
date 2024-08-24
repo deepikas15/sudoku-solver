@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Solver</h1>
+        <form id="sudokuForm">
+            <div class="grid">
+                <!-- Create a 9x9 grid for Sudoku input -->
+                <!-- Each input will have an id like 'cell00', 'cell01', ..., 'cell88' -->
+                <!-- Loop through rows and columns to create the grid -->
+                <script>
+                    for (let i = 0; i < 9; i++) {
+                        for (let j = 0; j < 9; j++) {
+                            document.write(`<input type="number" id="cell${i}${j}" min="0" max="9" value="0">`);
+                        }
+                    }
+                </script>
+            </div>
+            <button type="button" onclick="solveSudokuOnClick()">Solve</button>
+        </form>
+        <div id="solution"></div>
+    </div>
+
+    <script src="sudoku.js"></script>
+</body>
+</html>
